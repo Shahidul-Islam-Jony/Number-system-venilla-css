@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number_System</title>
+    <!-- font Awsome icon link -->
+    <script src="https://kit.fontawesome.com/be061c3c82.js" crossorigin="anonymous"></script>
+    <!-- css link -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <h1>Welcome to Number System</h1>
+
+    <div class="container customShadow">
+        <input id="display" disabled class="input-field" type="text" name="text" id="text" hover:bg-or20ge-500 placeholder="Enter your number">
+        <div><button onclick="appendToDisplay('1')" class="btn">1</button></div>
+        <div><button onclick="appendToDisplay('2')" class="btn">2</button></div>
+        <div><button onclick="appendToDisplay('3')" class="btn">3</button></div>
+        <div><button onclick="appendToDisplay('4')" class="btn">4</button></div>
+        <div><button onclick="appendToDisplay('5')" class="btn">5</button></div>
+        <div><button onclick="appendToDisplay('6')" class="btn">6</button></div>
+        <div><button onclick="appendToDisplay('7')" class="btn">7</button></div>
+        <div><button onclick="appendToDisplay('8')" class="btn">8</button></div>
+        <div><button onclick="appendToDisplay('9')" class="btn">9</button></div>
+        <div><button onclick="appendToDisplay('0')" class="btn">0</button></div>
+        <div><button onclick="appendToDisplay('A')" class="btn">A</button></div>
+        <div><button onclick="appendToDisplay('B')" class="btn">B</button></div>
+        <div><button onclick="appendToDisplay('C')" class="btn">C</button></div>
+        <div><button onclick="appendToDisplay('D')" class="btn">D</button></div>
+        <div><button onclick="appendToDisplay('E')" class="btn">E</button></div>
+        <div><button onclick="appendToDisplay('F')" class="btn">F</button></div>
+        <div><button onclick="appendToDisplay('+')" class="btn">+</button></div>
+        <div><button onclick="appendToDisplay('-')" class="btn">-</button></div>
+        <div><button onclick="appendToDisplay('*')" class="btn">*</button></div>
+        <div><button onclick="appendToDisplay('/')" class="btn">/</button></div>
+        <div><button onclick="appendToDisplay('%')" class="btn">%</button></div>
+        <div><button onclick="appendToDisplay('.')" class="btn">.</button></div>
+        <div><button onclick="binary()" class="btn btn-op">Binary</button></div>
+        <div><button onclick="octal()" class="btn btn-op">Octal</button></div>
+        <div><button onclick="hexaDecimal()" class="btn btn-op" title="Hexadecimal">Hexa</button></div>
+        <div><button onclick="binaryToDecimal()" class="btn btn-op" title="Binary to Decimal">BTD</button></div>
+        <div><button onclick="octalToDecimal()" class="btn btn-op" title="Octal to Decimal">OTD</button></div>
+        <div><button onclick="hexaToDecimal()" class="btn btn-op" title="Hexadecimal to Decimal">HTD</button></div>
+        <div><button onclick="binaryToOctal()" class="btn btn-op" title="Binary to Octal">BTO</button></div>
+        <div><button onclick="octalToBinary()" class="btn btn-op" title="Octal to Binary">OTB</button></div>
+        <div><button onclick="binaryToHexadecimal()" class="btn btn-op" title="Binary to Hexadecimal">BTH</button></div>
+        <div><button onclick="hexadecimalToBinary()" class="btn btn-op" title="Hexadecimal to Binary">HTB</button></div>
+        <div><button onclick="octalToHexadecimal()" class="btn btn-op" title="Octal to Hexadecimal">OTH</button></div>
+        <div><button onclick="hexadecimalToOctal()" class="btn btn-op" title="Hexadecimal to Octal">HTO</button></div>
+        <div><button onclick="calculate()" class="btn">=</button></div>
+        <div><input onclick="clearDisplay()" type="reset" value="Clear" class="btn" style="color:red"></input></div>
+        <div onclick="del()" class="bottom"><img class="image" src="images/Jony.jpg" alt=""><span class="" title="delete">&copy; Rodix Jony</span><i class="fa-solid fa-delete-left"></i></div>
+    </div>
+    
+
+
+    <script src="javaScript.js"></script>
+</body>
+</html>
