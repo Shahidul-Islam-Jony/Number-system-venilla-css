@@ -144,7 +144,7 @@ function hexaToDecimal() {
 
             result = decimal + (decimalValue !== 0 ? decimalValue : '');
         }
-        else{
+        else {
             result += decimal;
         }
         setResult('Hexa-Deci', result);
@@ -305,16 +305,20 @@ function octalToHexadecimal() {
 
             // Convert octal whole part to decimal
             const decimalWhole = parseInt(octalWhole, 8);
-
             // Convert octal fractional part to decimal
             let decimalFractional = 0;
-            for (let i = 0; i < octalFractional.length; i++) {
-                const digit = parseInt(octalFractional[i], 8);
-                decimalFractional += digit / Math.pow(8, i + 1);
+            let decimalNumber = 0;
+            if (typeof octalFractional !== 'undefined') {
+                for (let i = 0; i < octalFractional.length; i++) {
+                    const digit = parseInt(octalFractional[i], 8);
+                    decimalFractional += digit / Math.pow(8, i + 1);
+                }
+                // Combine whole and fractional parts
+                decimalNumber = decimalWhole + decimalFractional;
             }
-
-            // Combine whole and fractional parts
-            const decimalNumber = decimalWhole + decimalFractional;
+            else {
+                decimalNumber += decimalWhole;
+            }
 
             // Convert decimal number to hexadecimal
             const hexadecimalNumber = decimalNumber.toString(16).toUpperCase();
@@ -346,14 +350,18 @@ function hexadecimalToOctal() {
 
             // Convert hexadecimal fractional part to decimal
             let decimalFractional = 0;
-            for (let i = 0; i < hexFractional.length; i++) {
-                const digit = parseInt(hexFractional[i], 16);
-                decimalFractional += digit / Math.pow(16, i + 1);
+            let decimalNumber = 0;
+            if (typeof hexFractional !== 'undefined') {
+                for (let i = 0; i < hexFractional.length; i++) {
+                    const digit = parseInt(hexFractional[i], 16);
+                    decimalFractional += digit / Math.pow(16, i + 1);
+                }
+                // Combine whole and fractional parts
+                decimalNumber = decimalWhole + decimalFractional;
             }
-
-            // Combine whole and fractional parts
-            const decimalNumber = decimalWhole + decimalFractional;
-
+            else{
+                decimalNumber += decimalWhole;
+            }
             // Convert decimal number to octal
             const octalNumber = decimalNumber.toString(8);
 
